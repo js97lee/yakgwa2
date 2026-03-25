@@ -1,0 +1,208 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 4, 0, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.popup {
+  position: relative;
+  background: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 380px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0,0,0,0.25);
+}
+
+/* 닫기 */
+.closeBtn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 0.8rem;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+.closeBtn:hover { background: rgba(255,255,255,0.25); }
+
+/* 헤더 */
+.header {
+  background: #1A0A02;
+  padding: 1.6rem 1.8rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.logoRow {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.brandLogo {
+  height: 20px;
+  width: auto;
+  filter: invert(1) brightness(2);
+  opacity: 0.9;
+}
+
+.x {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.4);
+  font-weight: 300;
+}
+
+.kxizyLogo {
+  height: 18px;
+  width: auto;
+  filter: invert(1) brightness(2);
+  opacity: 0.9;
+}
+
+.colabTag {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.55rem;
+  letter-spacing: 0.4em;
+  color: #C8964E;
+  text-transform: uppercase;
+}
+
+/* 약과 이미지 영역 */
+.imgArea {
+  background: #F5EDE0;
+  padding: 1.8rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: -1rem;
+  position: relative;
+  min-height: 140px;
+}
+
+.yakgwaImg {
+  width: 110px;
+  height: 110px;
+  object-fit: contain;
+  position: relative;
+  z-index: 2;
+}
+
+.yakgwaImgSub {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  position: absolute;
+  right: 2.5rem;
+  bottom: 1rem;
+  opacity: 0.7;
+  z-index: 1;
+}
+
+/* 본문 */
+.body {
+  padding: 1.4rem 1.8rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.eventTag {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #C8964E;
+  letter-spacing: 0.05em;
+}
+
+.title {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #1A0A02;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.accent { color: #C8964E; }
+
+.desc {
+  font-size: 0.82rem;
+  color: #6B5040;
+  line-height: 1.75;
+}
+
+.desc strong { color: #1A0A02; }
+
+.deadline {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #FBF7F2;
+  border-radius: 8px;
+  padding: 0.5rem 0.9rem;
+  width: fit-content;
+}
+
+.deadlineLabel {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.7rem;
+  color: #8C6E55;
+}
+
+.deadlineDate {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #C8964E;
+}
+
+/* CTA */
+.ctaBtn {
+  display: block;
+  margin: 1rem 1.8rem 0.6rem;
+  padding: 0.9rem;
+  background: #1A0A02;
+  color: #fff;
+  text-align: center;
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-weight: 700;
+  font-size: 0.88rem;
+  letter-spacing: 0.05em;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.ctaBtn:hover { background: #C8964E; }
+
+.todayClose {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  background: none;
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.72rem;
+  color: rgba(26,10,2,0.35);
+  cursor: pointer;
+  margin-bottom: 0.2rem;
+  transition: color 0.2s;
+}
+.todayClose:hover { color: rgba(26,10,2,0.6); }
