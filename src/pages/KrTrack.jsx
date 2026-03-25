@@ -1,6 +1,7 @@
 import NavBar from '../components/common/NavBar';
 import Footer from '../components/common/Footer';
 import FloatingChat from '../components/common/FloatingChat';
+import MarqueeBanner from '../components/common/MarqueeBanner';
 import KrHero from '../components/kr/KrHero';
 import KrWhyUs from '../components/kr/KrWhyUs';
 import KrForWhom from '../components/kr/KrForWhom';
@@ -17,10 +18,11 @@ export default function KrTrack({ onLangSwitch }) {
     <div>
       <NavBar track="kr" onLangSwitch={onLangSwitch} />
       <KrHero />
-      <KrVideoSection />
       <KrWhyUs />
+      <MarqueeBanner />
       <KrForWhom />
       <KrProcess />
+      <KrVideoSection />
       <KrProduct />
       <KrPricing />
       <KrReviews />

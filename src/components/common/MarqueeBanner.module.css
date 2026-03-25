@@ -1,0 +1,43 @@
+.banner {
+  width: 100%;
+  overflow: hidden;
+  padding: 1.4rem 0;
+}
+
+.track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.set {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  padding: 0 1.6rem;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+  filter: invert(1) brightness(2);
+  opacity: 0.9;
+  flex-shrink: 0;
+}
+
+.dot {
+  font-size: 0.6rem;
+  color: rgba(255, 255, 255, 0.35);
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}

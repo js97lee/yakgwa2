@@ -51,18 +51,23 @@
   flex-direction: column;
   cursor: default;
   overflow: hidden;
-  border-radius: 8px;
-  transition: background 0.22s ease;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(26, 10, 2, 0.08);
+  transition: background 0.22s ease, box-shadow 0.22s ease, transform 0.22s ease;
 }
 
-.card:hover { background: #FBF7F2; }
+.card:hover {
+  background: #FFFFFF;
+  box-shadow: 0 8px 28px rgba(26, 10, 2, 0.13);
+  transform: translateY(-4px);
+}
 
 /* Image */
 .imgWrap {
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  background: #F5EDE0;
+  background: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;

@@ -37,6 +37,13 @@ export default function KrVideoSection() {
           <p className={styles.copy}>
             달콤함은 그대로,<br />부담은 가볍게.
           </p>
+          <div className={styles.kxizyBadge}>
+            <img src="/kxizy-icon.png" alt="KXIZY" className={styles.kxizyIcon} />
+            <div className={styles.kxizyText}>
+              <img src="/kxizy-logo.png" alt="KXIZY" className={styles.kxizyLogo} />
+              <span className={styles.kxizyDesc}>사방신 아이돌 케이지도 선택한 건강한 맛!</span>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
