@@ -1,0 +1,152 @@
+.wrap {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+/* FAB */
+.fab {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0 1.4rem 0 1.1rem;
+  height: 52px;
+  background: #1A0A02;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.22);
+  transition: background 0.2s ease;
+}
+
+.fab:hover { background: #2A1208; }
+
+.fabOpen {
+  padding: 0;
+  width: 52px;
+  justify-content: center;
+  background: #4A3020;
+}
+
+.fabLabel {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+/* Panel */
+.panel {
+  width: 300px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.16);
+  overflow: hidden;
+  transform-origin: bottom right;
+}
+
+.panelHeader {
+  background: #1A0A02;
+  padding: 1.4rem 1.6rem 1.2rem;
+}
+
+.brandRow {
+  margin-bottom: 0.5rem;
+}
+
+.panelLogo {
+  height: 22px;
+  width: auto;
+  mix-blend-mode: multiply;
+  filter: invert(1) brightness(2);
+  opacity: 0.9;
+}
+
+.panelSub {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.65);
+}
+
+/* Channels */
+.channels {
+  display: flex;
+  flex-direction: column;
+}
+
+.channel {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 1rem 1.4rem;
+  text-decoration: none;
+  border-bottom: 1px solid #F0EBE3;
+  transition: background 0.15s ease;
+  color: #1A0A02;
+}
+
+.channel:hover { background: #FBF7F2; }
+
+.channel:last-child { border-bottom: none; }
+
+.channelIcon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  background: #F5EDE0;
+}
+
+.kakao .channelIcon { background: #FFE000; }
+.insta .channelIcon { background: #F5F0FF; }
+.email .channelIcon { background: #FFF3E0; }
+
+.channelText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  flex: 1;
+}
+
+.channelName {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: #1A0A02;
+}
+
+.channelDesc {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.68rem;
+  color: #8C6E55;
+}
+
+.arrow {
+  color: #C8964E;
+  flex-shrink: 0;
+}
+
+/* Notice */
+.notice {
+  padding: 0.9rem 1.4rem;
+  font-size: 0.68rem;
+  color: #8C6E55;
+  line-height: 1.6;
+  background: #FBF7F2;
+  font-family: 'NanumSquareNeo', sans-serif;
+}
+
+@media (max-width: 480px) {
+  .wrap { bottom: 1.2rem; right: 1.2rem; }
+  .panel { width: calc(100vw - 2.4rem); }
+}

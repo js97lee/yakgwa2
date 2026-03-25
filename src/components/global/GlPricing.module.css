@@ -1,0 +1,123 @@
+.section {
+  background: #FFFFFF;
+  padding: 7rem 3rem;
+}
+
+.inner { max-width: 900px; margin: 0 auto; }
+
+.header { margin-bottom: 4rem; }
+
+.label {
+  display: block;
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  color: #5C8A5C;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #0C1A0D;
+  margin-bottom: 0.4rem;
+}
+
+.sub {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.78rem;
+  color: #5A7A5A;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border: 1px solid #C8DCC5;
+  background: #C8DCC5;
+}
+
+.card {
+  background: #FFFFFF;
+  padding: 2.8rem 2.4rem;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: background 0.22s ease;
+}
+
+.card:hover { background: #F6FAF5; }
+
+.card.featured { background: #0C1A0D; }
+.card.featured:hover { background: #1A3020; }
+
+.tagBadge {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #5C8A5C;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.card.featured .tagBadge { color: #7DAA7D; }
+
+.productIcon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+.productName {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #0C1A0D;
+}
+
+.card.featured .productName { color: #fff; }
+
+.productQty {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.78rem;
+  color: #5A7A5A;
+}
+
+.card.featured .productQty { color: rgba(255,255,255,0.38); }
+
+.price {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #5C8A5C;
+  margin: 0.8rem 0;
+  line-height: 1;
+}
+
+.buyBtn {
+  margin-top: auto;
+  display: block;
+  padding: 0.75rem 1.2rem;
+  background: #0C1A0D;
+  color: #fff;
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  text-align: center;
+}
+
+.buyBtn:hover { background: #5C8A5C; }
+.card.featured .buyBtn { background: #5C8A5C; }
+.card.featured .buyBtn:hover { background: #6A9E6A; }
+
+@media (max-width: 640px) {
+  .section { padding: 5rem 1.5rem; }
+  .cards { grid-template-columns: 1fr; }
+}

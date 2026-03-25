@@ -1,0 +1,98 @@
+.section {
+  background: #E2EDE0;
+  padding: 7rem 3rem;
+  overflow: hidden;
+}
+
+.inner {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.label {
+  display: block;
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  color: #5C8A5C;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+
+.mainCopy {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.8rem, 4.5vw, 2.8rem);
+  font-weight: 700;
+  color: #0C1A0D;
+  line-height: 1.35;
+  margin-bottom: 3.5rem;
+}
+
+.accent { color: #5C8A5C; font-style: italic; }
+
+.typeBlock {
+  background: rgba(255,255,255,0.6);
+  border: 1px solid rgba(92,138,92,0.2);
+  padding: 2.8rem 3.2rem;
+  min-height: 180px;
+  backdrop-filter: blur(4px);
+}
+
+.values { display: flex; flex-direction: column; gap: 1.4rem; }
+
+.value {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 2.2vw, 1.2rem);
+  color: rgba(12,26,13,0.25);
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  transition: color 0.3s ease;
+  min-height: 1.8em;
+}
+
+.value.active { color: #0C1A0D; }
+.value.done { color: rgba(12,26,13,0.45); }
+
+.bullet { color: #5C8A5C; font-size: 0.55rem; flex-shrink: 0; margin-top: 0.3rem; }
+
+.cursor {
+  color: #5C8A5C;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.finalMsg { margin-top: 2.5rem; display: flex; flex-direction: column; gap: 1.5rem; }
+
+.divider { height: 1px; background: rgba(92,138,92,0.28); }
+
+.finalMsg span {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  font-style: italic;
+  color: #5C8A5C;
+  text-align: center;
+}
+
+.bgDeco {
+  position: absolute;
+  top: -2rem;
+  right: -4rem;
+  font-size: clamp(8rem, 20vw, 16rem);
+  font-weight: 700;
+  color: rgba(12,26,13,0.04);
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+@media (max-width: 640px) {
+  .section { padding: 5rem 1.5rem; }
+  .typeBlock { padding: 1.8rem 1.5rem; }
+}

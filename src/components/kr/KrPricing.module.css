@@ -1,0 +1,140 @@
+.section {
+  background: #FFFFFF;
+  padding: 7rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.bgLogo {
+  position: absolute;
+  bottom: -1rem;
+  right: 8%;
+  width: 580px;
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
+  filter: grayscale(1);
+}
+
+.inner { max-width: 900px; margin: 0 auto; }
+
+.header { margin-bottom: 4rem; text-align: center; }
+
+.label {
+  display: block;
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.35em;
+  color: #C8964E;
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+}
+
+.title {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: #1A0A02;
+  margin-bottom: 0.4rem;
+}
+
+.sub {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.78rem;
+  color: #8C6E55;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  border: 1px solid #DDD0BC;
+  background: #DDD0BC;
+}
+
+.card {
+  background: #FFFFFF;
+  padding: 2.8rem 2.4rem;
+  text-align: left;
+  position: relative;
+  cursor: pointer;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: background 0.22s ease;
+}
+
+.card:hover { background: #FBF7F2; }
+
+.card.featured {
+  background: #1A0A02;
+}
+.card.featured:hover { background: #2A1208; }
+
+.tagBadge {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: #C8964E;
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+}
+
+.card.featured .tagBadge { color: #D4A853; }
+
+.productIcon { font-size: 1.8rem; margin-bottom: 0.5rem; }
+
+.productName {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #1A0A02;
+}
+
+.card.featured .productName { color: #fff; }
+
+.productQty {
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-size: 0.78rem;
+  color: #8C6E55;
+}
+
+.card.featured .productQty { color: rgba(255,255,255,0.4); }
+
+.price {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #C8964E;
+  margin: 0.8rem 0;
+  line-height: 1;
+}
+
+.price span { font-size: 1rem; font-weight: 400; }
+
+.buyBtn {
+  margin-top: auto;
+  display: block;
+  padding: 0.75rem 1.2rem;
+  background: #1A0A02;
+  color: #fff;
+  font-family: 'NanumSquareNeo', sans-serif;
+  font-weight: 600;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.2s ease;
+  text-align: center;
+}
+
+.buyBtn:hover { background: #C8964E; }
+.card.featured .buyBtn { background: #C8964E; }
+.card.featured .buyBtn:hover { background: #D4A853; }
+
+@media (max-width: 640px) {
+  .section { padding: 5rem 1.5rem; }
+  .cards { grid-template-columns: 1fr; }
+}

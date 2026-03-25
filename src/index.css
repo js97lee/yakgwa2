@@ -1,0 +1,46 @@
+@import url('https://hangeul.pstatic.net/hangeul_static/css/nanum-square-neo.css');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  /* KR 팔레트 — 라이트 웜 */
+  --kr-hero:    #F5EDE0;   /* 웜 크림 */
+  --kr-cream:   #FBF7F2;   /* 밝은 크림 */
+  --kr-beige:   #EDE4D6;   /* 살짝 어두운 베이지 */
+  --kr-white:   #FFFFFF;
+  --kr-dark:    #1A0A02;   /* 포인트 다크 (CTA만) */
+  --kr-text:    #1A0A02;
+  --kr-muted:   #8C6E55;
+  --kr-gold:    #C8964E;
+  --kr-border:  #DDD0BC;
+
+  /* GL 팔레트 — 라이트 쿨 세이지 */
+  --gl-hero:    #EBF2E8;   /* 연한 세이지 */
+  --gl-cream:   #F6FAF5;   /* 밝은 세이지 화이트 */
+  --gl-light:   #E2EDE0;   /* 살짝 어두운 세이지 */
+  --gl-white:   #FFFFFF;
+  --gl-dark:    #1A3020;   /* 포인트 다크 (CTA만) */
+  --gl-text:    #0C1A0D;
+  --gl-muted:   #5A7A5A;
+  --gl-sage:    #5C8A5C;
+  --gl-border:  #C8DCC5;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'NanumSquareNeo', sans-serif;
+  color: #1A0A02;
+  background: #FFFFFF;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 3px; }
