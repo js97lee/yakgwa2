@@ -101,6 +101,19 @@ export default function FloatingChat() {
         )}
       </AnimatePresence>
 
+      {/* 맨 위로 버튼 */}
+      <motion.button
+        className={styles.scrollTop}
+        onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.94 }}
+        aria-label="맨 위로"
+      >
+        <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M9 14V4M4 9l5-5 5 5" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        </svg>
+      </motion.button>
+
       {/* FAB 버튼 */}
       <motion.button
         className={`${styles.fab} ${open ? styles.fabOpen : ''}`}
