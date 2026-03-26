@@ -33,22 +33,25 @@ const icons = [IconLowSugar, IconCalorie, IconPlant];
 
 const cards = [
   {
-    title: '저당 설계',
+    title: '콩으로 채우는 단백질',
     desc: '일반 디저트 대비 낮은 당류',
     detail: '알룰로스를 사용해 달콤함은 유지하면서 혈당 부담을 줄였어요',
     color: '#D4A853',
+    img: '/img-soy.png',
   },
   {
-    title: '가벼운 칼로리',
+    title: '튀기지 않고 구워서 가볍게',
     desc: '부담 없는 간식',
     detail: '콩의 풍부한 식이섬유로 포만감은 높이고 칼로리는 낮게',
     color: '#C8964E',
+    img: '/img-baking.png',
   },
   {
-    title: '식물성 원료',
+    title: '설탕 없이도 달달하게',
     desc: '속 편한 건강한 디저트',
     detail: '장인이 한땀한땀 만든 건강한 식물성 수제 명품간식',
     color: '#7BAF7B',
+    img: '/img-honey.png',
   },
 ];
 
@@ -59,13 +62,18 @@ function Card({ card, index }) {
   return (
     <motion.div
       ref={ref}
-      className={styles.card}
+      className={`${styles.card} ${card.img ? styles.cardDark : ''}`}
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: index * 0.15 }}
       whileHover={{ scale: 1.04, y: -6 }}
     >
-      <div className={styles.cardIcon}><Icon color={card.color} /></div>
+      {card.img && (
+        <div className={styles.cardImg}><img src={card.img} alt={card.title} /></div>
+      )}
+      <div className={styles.cardIcon}>
+        <Icon color={card.img ? '#ffffff' : card.color} />
+      </div>
       <div className={styles.cardTitle}>{card.title}</div>
       <div className={styles.cardDesc}>{card.desc}</div>
       <div className={styles.cardDetail}>{card.detail}</div>
@@ -87,6 +95,7 @@ export default function KrWhyUs() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
+          <img src="/icon-palace.png" alt="" className="sectionIcon" />
           <span className={styles.label}>CORE VALUE</span>
           <h2 className={styles.title}>
             내 몸을 생각한,<br />

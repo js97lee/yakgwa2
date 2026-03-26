@@ -76,6 +76,7 @@ export default function KrReviews() {
         animate={headerInView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7 }}
       >
+        <img src="/icon-palace.png" alt="" className="sectionIcon" />
         <span className={styles.label}>REVIEWS</span>
         <h2 className={styles.title}>리얼 후기</h2>
       </motion.div>

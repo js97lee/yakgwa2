@@ -63,6 +63,7 @@ export default function KrPricing() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
+          <img src="/icon-palace.png" alt="" className="sectionIcon" />
           <span className={styles.label}>PRICING</span>
           <h2 className={styles.title}>부담 없이 즐기는 달콤함</h2>
           <p className={styles.sub}>카드에 마우스를 올려보세요</p>

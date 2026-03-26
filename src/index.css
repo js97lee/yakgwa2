@@ -45,3 +45,21 @@ body {
 ::-webkit-scrollbar { width: 5px; }
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.12); border-radius: 3px; }
+
+/* 섹션 공통 궁궐 아이콘 */
+.sectionIcon {
+  display: block;
+  width: 36px;
+  height: auto;
+  margin: 0 auto 0.8rem;
+  opacity: 0.45;
+}
+
+.sectionIconWhite {
+  display: block;
+  width: 36px;
+  height: auto;
+  margin: 0 auto 0.8rem;
+  opacity: 0.55;
+  filter: invert(1);
+}

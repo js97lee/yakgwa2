@@ -1,36 +1,45 @@
-.nav {
+/* 플로팅 네비게이션 래퍼 */
+.navWrap {
   position: fixed;
-  top: 0;
+  top: 1.2rem;
   left: 0;
   right: 0;
   z-index: 100;
+  width: calc(100% - 4rem);
+  max-width: 1400px;
+  margin: 0 auto;
+  transition: top 0.3s ease;
+}
+
+.nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 3rem;
-  background: rgba(0, 0, 0, 0.30);
-  backdrop-filter: blur(4px);
-  border-bottom: 1px solid transparent;
-  transition: background 0.3s ease, padding 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
+  padding: 0.75rem 1.6rem;
+  background: rgba(10, 4, 0, 0.35);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 9999px;
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .scrolled {
-  padding: 0.7rem 3rem;
-  background: rgba(255, 255, 255, 0.96);
-  border-color: rgba(0,0,0,0.07);
-  box-shadow: 0 1px 12px rgba(0,0,0,0.05);
-  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(0,0,0,0.08);
+  box-shadow: 0 4px 28px rgba(0,0,0,0.1);
 }
 
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
-  height: 40px;
+  height: 36px;
 }
 
 .logoImg {
-  height: 32px;
+  height: 28px;
   width: auto;
   display: block;
   mix-blend-mode: multiply;
@@ -38,9 +47,7 @@
   transition: opacity 0.2s ease, filter 0.3s ease;
 }
 
-.logoImg:hover {
-  opacity: 1;
-}
+.logoImg:hover { opacity: 1; }
 
 /* 최상단: 로고 흰색 반전 */
 .logoWhite {
@@ -53,7 +60,7 @@
 .right {
   display: flex;
   align-items: center;
-  gap: 1.4rem;
+  gap: 1.2rem;
 }
 
 /* Lang toggle */
@@ -96,27 +103,21 @@
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.1em;
-  padding: 0.48rem 1.1rem;
+  padding: 0.42rem 1rem;
   border-radius: 9999px;
   text-decoration: none;
   text-transform: uppercase;
   transition: all 0.2s ease;
 }
 
-.ctaKr {
-  background: #C8964E;
-  color: #fff;
-}
+.ctaKr { background: #C8964E; color: #fff; }
 .ctaKr:hover { background: #B8864E; }
 
-.ctaGl {
-  background: #5C8A5C;
-  color: #fff;
-}
+.ctaGl { background: #5C8A5C; color: #fff; }
 .ctaGl:hover { background: #4A7A4A; }
 
 @media (max-width: 640px) {
-  .nav { padding: 0.8rem 1.5rem; }
-  .scrolled { padding: 0.6rem 1.5rem; }
-  .logoImg { height: 26px; }
+  .navWrap { top: 0.8rem; width: calc(100% - 2rem); }
+  .nav { padding: 0.65rem 1.2rem; }
+  .logoImg { height: 24px; }
 }

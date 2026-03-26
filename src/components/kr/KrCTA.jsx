@@ -7,6 +7,17 @@ export default function KrCTA() {
 
   return (
     <section id="cta" className={styles.section}>
+      {/* 배경 영상 */}
+      <video
+        className={styles.bgVideo}
+        src="/cta-video.mp4"
+        autoPlay
+        muted
+        loop
+        playsInline
+      />
+      <div className={styles.bgOverlay} />
+
       <div className={styles.inner} ref={ref}>
         <motion.div
           className={styles.decoText}
@@ -17,6 +28,7 @@ export default function KrCTA() {
           약과
         </motion.div>
 
+        <img src="/icon-palace.png" alt="" className="sectionIconWhite" />
         <motion.span
           className={styles.label}
           initial={{ opacity: 0 }}
@@ -36,15 +48,6 @@ export default function KrCTA() {
           <span className={styles.accent}>즐겨보세요</span>
         </motion.h2>
 
-        <motion.p
-          className={styles.sub}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.5 }}
-        >
-          죄책감 없이 즐기는 저당 식물성 약과<br />
-          지금 바로 경험해보세요
-        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 15 }}
@@ -62,16 +65,6 @@ export default function KrCTA() {
           </a>
         </motion.div>
 
-        <motion.div
-          className={styles.badges}
-          initial={{ opacity: 0 }}
-          animate={inView ? { opacity: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          {['🌿 100% 식물성', '🍬 저당 설계', '🔄 업사이클 재료'].map(b => (
-            <span key={b} className={styles.badge}>{b}</span>
-          ))}
-        </motion.div>
       </div>
     </section>
   );

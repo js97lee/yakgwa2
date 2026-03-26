@@ -23,7 +23,7 @@ export default function CursorFollower() {
       className={styles.cursor}
       style={{ x: springX, y: springY }}
     >
-      <img src="/injeolmi.png" alt="" className={styles.img} />
+      <img src="/original.png" alt="" className={styles.img} />
     </motion.div>
   );
 }

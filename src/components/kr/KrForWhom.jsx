@@ -82,6 +82,7 @@ export default function KrForWhom() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
         >
+          <img src="/icon-palace.png" alt="" className="sectionIcon" />
           <span className={styles.label}>FOR WHOM</span>
           <h2 className={styles.title}>
             오늘도 참을까, 먹을까<br />
@@ -115,7 +116,7 @@ export default function KrForWhom() {
                 transition={{ duration: 0.7 }}
               >
                 <div className={styles.divider} />
-                <p className={styles.finalMsg}>이제는 참지 않아도 됩니다</p>
+                <p className={styles.finalMsg}>이제는,<br />참지 않아도 됩니다.</p>
                 <span className={styles.finalSub}>종로약과가 함께합니다 ✦</span>
               </motion.div>
             )}

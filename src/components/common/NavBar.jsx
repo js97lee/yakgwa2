@@ -13,34 +13,38 @@ export default function NavBar({ track, onLangSwitch }) {
   }, []);
 
   return (
-    <motion.nav
-      className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}
-      initial={{ y: -60, opacity: 0 }}
+    <motion.div
+      className={styles.navWrap}
+      initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5, ease: 'easeOut' }}
     >
-      <div className={styles.logo}>
-        <img
-          src="/logo-h.png"
-          alt="종로약과"
-          className={`${styles.logoImg} ${!scrolled ? styles.logoWhite : ''}`}
-        />
-      </div>
+      <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
+        <div className={styles.logo}>
+          <a href="#" onClick={e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+            <img
+              src="/logo-h.png"
+              alt="종로약과"
+              className={`${styles.logoImg} ${!scrolled ? styles.logoWhite : ''}`}
+            />
+          </a>
+        </div>
 
-      <div className={styles.right}>
-        <button
-          className={`${styles.langToggle} ${!scrolled ? styles.langToggleWhite : ''}`}
-          onClick={onLangSwitch}
-          aria-label="Switch language"
-        >
-          <span className={isKr ? styles.langActive : styles.langInactive}>KR</span>
-          <span className={styles.langSlash}>/</span>
-          <span className={!isKr ? styles.langActive : styles.langInactive}>EN</span>
-        </button>
-        <a href="#cta" className={`${styles.cta} ${isKr ? styles.ctaKr : styles.ctaGl}`}>
-          {isKr ? '구매하기' : 'Shop Now'}
-        </a>
-      </div>
-    </motion.nav>
+        <div className={styles.right}>
+          <button
+            className={`${styles.langToggle} ${!scrolled ? styles.langToggleWhite : ''}`}
+            onClick={onLangSwitch}
+            aria-label="Switch language"
+          >
+            <span className={isKr ? styles.langActive : styles.langInactive}>KR</span>
+            <span className={styles.langSlash}>/</span>
+            <span className={!isKr ? styles.langActive : styles.langInactive}>EN</span>
+          </button>
+          <a href="#cta" className={`${styles.cta} ${isKr ? styles.ctaKr : styles.ctaGl}`}>
+            {isKr ? '구매하기' : 'Shop Now'}
+          </a>
+        </div>
+      </nav>
+    </motion.div>
   );
 }

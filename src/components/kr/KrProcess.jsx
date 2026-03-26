@@ -107,6 +107,7 @@ export default function KrProcess() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
+          <img src="/icon-palace.png" alt="" className="sectionIcon" />
           <span className={styles.label}>INGREDIENT STORY</span>
           <h2 className={styles.title}>건강한 재료로 만든 간식</h2>
           <p className={styles.sub}>

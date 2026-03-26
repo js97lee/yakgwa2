@@ -70,6 +70,7 @@ export default function KrFAQ() {
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
         >
+          <img src="/icon-palace.png" alt="" className="sectionIcon" />
           <span className={styles.label}>FAQ</span>
           <h2 className={styles.title}>자주 묻는 질문</h2>
         </motion.div>

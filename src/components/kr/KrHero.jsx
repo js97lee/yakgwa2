@@ -43,7 +43,7 @@ export default function KrHero() {
             transition={{ duration: 0.8, delay: 0.5 }}
           >
             <span className={styles.subHeading}>가방에 쏙, 간편하게 즐기는 달콤함!</span>
-            <span className={styles.accent}>프로틴 저당 종로약과</span>
+            <span className={styles.accent}>프로틴 저당 약과</span>
           </motion.h1>
 
           <motion.p

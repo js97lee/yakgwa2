@@ -6,6 +6,23 @@
   overflow: hidden;
 }
 
+.bgVideo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.bgOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 4, 0, 0.62);
+  z-index: 1;
+}
+
 .inner {
   position: relative;
   z-index: 2;
