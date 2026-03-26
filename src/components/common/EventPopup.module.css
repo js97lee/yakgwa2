@@ -28,9 +28,9 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.15);
+  background: rgba(0,0,0,0.08);
   border: none;
-  color: #fff;
+  color: #1A0A02;
   font-size: 0.8rem;
   cursor: pointer;
   z-index: 10;
@@ -39,11 +39,11 @@
   justify-content: center;
   transition: background 0.2s;
 }
-.closeBtn:hover { background: rgba(255,255,255,0.25); }
+.closeBtn:hover { background: rgba(0,0,0,0.14); }
 
 /* 헤더 */
 .header {
-  background: #1A0A02;
+  background: transparent;
   padding: 1.6rem 1.8rem 1.2rem;
   display: flex;
   flex-direction: column;
@@ -61,21 +61,19 @@
 .brandLogo {
   height: 20px;
   width: auto;
-  filter: invert(1) brightness(2);
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 .x {
   font-size: 1rem;
-  color: rgba(255,255,255,0.4);
+  color: rgba(0,0,0,0.25);
   font-weight: 300;
 }
 
 .kxizyLogo {
   height: 18px;
   width: auto;
-  filter: invert(1) brightness(2);
-  opacity: 0.9;
+  opacity: 0.8;
 }
 
 .colabTag {
