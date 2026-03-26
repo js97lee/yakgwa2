@@ -47,12 +47,14 @@
   padding: 1.6rem 1.8rem 1.2rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 0.5rem;
 }
 
 .logoRow {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.8rem;
 }
 
@@ -104,6 +106,8 @@
   padding: 1.4rem 1.8rem 0.8rem;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  text-align: center;
   gap: 0.7rem;
 }
 
@@ -142,6 +146,7 @@
   border-radius: 9999px;
   padding: 0.5rem 0.9rem;
   width: fit-content;
+  margin: 0 auto;
 }
 
 .deadlineLabel {
