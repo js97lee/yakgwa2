@@ -118,6 +118,7 @@
   margin-top: auto;
   display: block;
   padding: 0.75rem 1.2rem;
+  border-radius: 9999px;
   background: #1A0A02;
   color: #fff;
   font-family: 'NanumSquareNeo', sans-serif;

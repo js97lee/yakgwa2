@@ -89,6 +89,7 @@
   align-items: center;
   gap: 0.7rem;
   padding: 0.9rem 2rem;
+  border-radius: 9999px;
   background: #0C1A0D;
   color: #fff;
   font-family: 'NanumSquareNeo', sans-serif;

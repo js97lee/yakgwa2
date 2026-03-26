@@ -111,7 +111,7 @@
   font-weight: 700;
   font-size: 0.88rem;
   letter-spacing: 0.05em;
-  border-radius: 50px;
+  border-radius: 9999px;
   text-decoration: none;
   transition: background 0.2s ease, transform 0.2s ease;
 }
