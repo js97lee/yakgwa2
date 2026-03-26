@@ -10,9 +10,16 @@ export default function KrHero() {
 
   return (
     <section ref={ref} className={styles.hero}>
-      {/* Background image */}
+      {/* Background video */}
       <motion.div className={styles.bg} style={{ y }}>
-        <img src="/hero-image.png" alt="" className={styles.bgVideo} />
+        <video
+          className={styles.bgVideo}
+          src="/hero-banner.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
         <div className={styles.bgOverlay} />
       </motion.div>
 
@@ -45,7 +52,7 @@ export default function KrHero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.8 }}
           >
-            알룰로스와 콩으로 만든 저당 단백질 약과가 드디어 주인공이 되었습니다.
+            맛과 건강을 모두잡은 프로틴 저당 단백질 약과가 드디어 출시되었습니다.
           </motion.p>
 
           <motion.div

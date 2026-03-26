@@ -41,11 +41,6 @@ export default function Footer({ track }) {
                 className={`${styles.logoImg} ${isKr ? styles.kr : styles.gl}`}
               />
             </div>
-            <p className={styles.brandDesc}>
-              {isKr
-                ? '버려지는 콩를 저당 식물성 약과로.\n음식을 다시 생각하는 브랜드.'
-                : 'Upcycled soy pulp. Low sugar. Plant-based.\nRethinking food, one Yakgwa at a time.'}
-            </p>
           </div>
 
           <nav className={styles.links}>
