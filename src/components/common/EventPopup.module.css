@@ -61,6 +61,8 @@
 .brandLogo {
   height: 20px;
   width: auto;
+  filter: invert(1);
+  mix-blend-mode: multiply;
   opacity: 0.85;
 }
 
@@ -79,6 +81,7 @@
 .colabTag {
   font-family: 'NanumSquareNeo', sans-serif;
   font-size: 0.55rem;
+  font-weight: 800;
   letter-spacing: 0.4em;
   color: #C8964E;
   text-transform: uppercase;
