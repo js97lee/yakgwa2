@@ -84,35 +84,19 @@
   text-transform: uppercase;
 }
 
-/* 약과 이미지 영역 */
+/* 콜라보 이미지 영역 */
 .imgArea {
-  background: #F5EDE0;
-  padding: 1.8rem 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: -1rem;
-  position: relative;
-  min-height: 140px;
+  width: 100%;
+  overflow: hidden;
+  max-height: 220px;
 }
 
-.yakgwaImg {
-  width: 110px;
-  height: 110px;
-  object-fit: contain;
-  position: relative;
-  z-index: 2;
-}
-
-.yakgwaImgSub {
-  width: 80px;
-  height: 80px;
-  object-fit: contain;
-  position: absolute;
-  right: 2.5rem;
-  bottom: 1rem;
-  opacity: 0.7;
-  z-index: 1;
+.colabPhoto {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  object-position: center 30%;
+  display: block;
 }
 
 /* 본문 */

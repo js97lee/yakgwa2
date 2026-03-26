@@ -43,22 +43,9 @@ export default function EventPopup() {
               <p className={styles.colabTag}>COLLABORATION</p>
             </div>
 
-            {/* 약과 이미지 */}
+            {/* 콜라보 이미지 */}
             <div className={styles.imgArea}>
-              <motion.img
-                src="/matcha.png"
-                alt="현무 말차 약과"
-                className={styles.yakgwaImg}
-                animate={{ rotate: [0, 6, -6, 0] }}
-                transition={{ repeat: Infinity, duration: 4, ease: 'easeInOut' }}
-              />
-              <motion.img
-                src="/original.png"
-                alt="청룡 오리지널 약과"
-                className={styles.yakgwaImgSub}
-                animate={{ rotate: [0, -5, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 4.5, ease: 'easeInOut', delay: 0.5 }}
-              />
+              <img src="/kxizy-photo.png" alt="KXIZY × 종로약과" className={styles.colabPhoto} />
             </div>
 
             {/* 이벤트 내용 */}
