@@ -23,13 +23,13 @@ export default function NavBar({ track, onLangSwitch }) {
         <img
           src="/logo-h.png"
           alt="종로약과"
-          className={styles.logoImg}
+          className={`${styles.logoImg} ${!scrolled ? styles.logoWhite : ''}`}
         />
       </div>
 
       <div className={styles.right}>
         <button
-          className={styles.langToggle}
+          className={`${styles.langToggle} ${!scrolled ? styles.langToggleWhite : ''}`}
           onClick={onLangSwitch}
           aria-label="Switch language"
         >

@@ -8,8 +8,10 @@
   align-items: center;
   justify-content: space-between;
   padding: 1rem 3rem;
-  transition: background 0.3s ease, padding 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  background: rgba(0, 0, 0, 0.30);
+  backdrop-filter: blur(4px);
   border-bottom: 1px solid transparent;
+  transition: background 0.3s ease, padding 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, backdrop-filter 0.3s ease;
 }
 
 .scrolled {
@@ -31,15 +33,20 @@
   height: 32px;
   width: auto;
   display: block;
-  /* 검정 배경 PNG → 밝은 배경에서 로고만 보이도록 */
   mix-blend-mode: multiply;
-  /* 투명도로 밝기 보정 */
   opacity: 0.85;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, filter 0.3s ease;
 }
 
 .logoImg:hover {
   opacity: 1;
+}
+
+/* 최상단: 로고 흰색 반전 */
+.logoWhite {
+  mix-blend-mode: normal;
+  filter: invert(1) brightness(10);
+  opacity: 0.95;
 }
 
 /* Right */
@@ -76,7 +83,12 @@
 
 .langToggle:hover .langInactive { color: rgba(0,0,0,0.6); }
 
-.langSlash { color: rgba(0,0,0,0.18); }
+.langSlash { color: rgba(0,0,0,0.18); transition: color 0.3s ease; }
+
+/* 최상단: 텍스트 흰색 */
+.langToggleWhite .langActive  { color: #ffffff; }
+.langToggleWhite .langInactive { color: rgba(255,255,255,0.45); }
+.langToggleWhite .langSlash   { color: rgba(255,255,255,0.25); }
 
 /* CTA */
 .cta {
