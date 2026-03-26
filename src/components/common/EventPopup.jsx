@@ -46,6 +46,7 @@ export default function EventPopup() {
             {/* 콜라보 이미지 */}
             <div className={styles.imgArea}>
               <img src="/kxizy-photo.png" alt="KXIZY × 종로약과" className={styles.colabPhoto} />
+              <img src="/logo-white.png" alt="종로약과" className={styles.imgLogo} />
             </div>
 
             {/* 이벤트 내용 */}
