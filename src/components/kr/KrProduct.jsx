@@ -80,6 +80,9 @@ function ProductCard({ product, index }) {
               </span>
             ))}
           </div>
+          <a href="#pricing" className={styles.buyBtn} style={{ background: product.color }}>
+            구매하기
+          </a>
         </div>
       </div>
     </motion.div>

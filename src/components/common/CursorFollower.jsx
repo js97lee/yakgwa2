@@ -11,8 +11,8 @@ export default function CursorFollower() {
 
   useEffect(() => {
     const move = (e) => {
-      mouseX.set(e.clientX - 20);
-      mouseY.set(e.clientY - 20);
+      mouseX.set(e.clientX - 32);
+      mouseY.set(e.clientY - 32);
     };
     window.addEventListener('mousemove', move);
     return () => window.removeEventListener('mousemove', move);
@@ -23,7 +23,7 @@ export default function CursorFollower() {
       className={styles.cursor}
       style={{ x: springX, y: springY }}
     >
-      <img src="/matcha.png" alt="" className={styles.img} />
+      <img src="/injeolmi.png" alt="" className={styles.img} />
     </motion.div>
   );
 }

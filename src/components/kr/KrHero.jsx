@@ -42,7 +42,7 @@ export default function KrHero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
           >
-            <span className={styles.subHeading}>달콤함은 그대로, 부담은 가볍게!</span>
+            <span className={styles.subHeading}>가방에 쏙, 간편하게 즐기는 달콤함!</span>
             <span className={styles.accent}>프로틴 저당 종로약과</span>
           </motion.h1>
 
@@ -66,22 +66,6 @@ export default function KrHero() {
           </motion.div>
         </div>
 
-        {/* 스피닝 이미지 */}
-        <div className={styles.imgCol}>
-          <motion.img
-            src="/injeolmi.png"
-            alt="종로약과 주작"
-            className={styles.spinImg}
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            whileHover={{ rotate: 360 }}
-            transition={{
-              opacity: { duration: 0.8, delay: 0.6 },
-              scale: { duration: 0.8, delay: 0.6 },
-              rotate: { duration: 0.7, ease: 'easeInOut' },
-            }}
-          />
-        </div>
       </motion.div>
 
       {/* Scroll Down */}

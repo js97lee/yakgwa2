@@ -35,6 +35,14 @@
 
 .accent { color: #C8964E; }
 
+/* 2열 레이아웃 */
+.contentRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
 /* Stage */
 .stageWrap {
   display: flex;
@@ -43,6 +51,20 @@
   gap: 2.5rem;
   min-height: 260px;
   justify-content: center;
+  flex: 1;
+}
+
+/* 약과 이미지 */
+.yakgwaCol {
+  flex-shrink: 0;
+}
+
+.spinImg {
+  width: clamp(160px, 18vw, 260px);
+  height: clamp(160px, 18vw, 260px);
+  object-fit: contain;
+  cursor: pointer;
+  filter: drop-shadow(0 8px 24px rgba(26,10,2,0.15));
 }
 
 .slide {
@@ -145,4 +167,7 @@
 
 @media (max-width: 768px) {
   .section { padding: 5rem 1.5rem; }
+  .contentRow { flex-direction: column; gap: 2rem; }
+  .yakgwaCol { order: -1; }
+  .spinImg { width: 140px; height: 140px; }
 }

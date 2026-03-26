@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import styles from './KrForWhom.module.css';
 
+
 const personas = [
   { tag: '# 다이어터', line: '먹고 싶은데\n참아야 할까?' },
   { tag: '# 건강 관심층', line: '맛있으면서\n몸에도 좋은 간식' },
@@ -88,8 +89,10 @@ export default function KrForWhom() {
           </h2>
         </motion.div>
 
-        {/* 한 번에 하나씩 슬라이드 */}
-        <div className={styles.stageWrap}>
+        {/* 2열: 타이핑 + 약과 이미지 */}
+        <div className={styles.contentRow}>
+          {/* 한 번에 하나씩 슬라이드 */}
+          <div className={styles.stageWrap}>
           <AnimatePresence mode="wait">
             {current >= 0 && !finished && (
               <motion.div
@@ -129,6 +132,23 @@ export default function KrForWhom() {
               ))}
             </div>
           )}
+          </div>
+
+          {/* 스피닝 약과 */}
+          <motion.div
+            className={styles.yakgwaCol}
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={inView ? { opacity: 1, scale: 1 } : {}}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <motion.img
+              src="/injeolmi.png"
+              alt="종로약과 주작"
+              className={styles.spinImg}
+              whileHover={{ rotate: 360 }}
+              transition={{ rotate: { duration: 0.7, ease: 'easeInOut' } }}
+            />
+          </motion.div>
         </div>
       </div>
     </section>
